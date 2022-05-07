@@ -1,3 +1,8 @@
+quick and dirty python script to extrackt ddl from oracle database.
+
+
+
+
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
 python get-pip.py
