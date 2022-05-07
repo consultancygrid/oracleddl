@@ -4,7 +4,7 @@ import subprocess
 import glob
 
 # path to local oracle client installation
-lib_dir = r"C:\tools\oracle_client\instantclient_21_3"
+lib_dir = r"PATH_TO_YOUR_ORACLE_CLIENT"
 
 try:
     cx_Oracle.init_oracle_client(lib_dir=lib_dir)
@@ -60,12 +60,10 @@ order by 1,2,3
    os.makedirs(sys.argv[1].upper())
   if not os.path.exists(sys.argv[1].upper() + '/' + r[0]):
    os.makedirs(sys.argv[1].upper() + '/' + r[0])
-  with open( sys.argv[1].upper() + '/' + r[0] + '/' + r[2] +'.'+ r[4], 'a') as f:
+  with open( sys.argv[1].upper() + '/' + r[0] + '/' + r[2] +'.'+ r[4], 'w') as f:
 #        with open( r[1] + '/' + r[0] + '/' + r[1] + '.' + r[2] +'.sql', 'w') as f:
 #   print >> f, '', r[3]
             f.write(r[3].strip())
-            if r[4].lower() == 'rgr':
-                f.write("\n")
   f.close()
  #print res
 
